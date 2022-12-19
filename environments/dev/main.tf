@@ -19,6 +19,7 @@ locals {
 
 provider "google" {
   project = "${var.project}"
+  credentials = file("myCredentials.json")
 }
 
 module "vpc" {
